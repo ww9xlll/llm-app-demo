@@ -10,6 +10,7 @@ const getContent = (content: MessageContent): string => {
     }
     return content.toString();
 };
+
 chat.get('/', async (ctx) => {
     const model = new ChatGoogleGenerativeAI({
         model: "gemini-pro",
