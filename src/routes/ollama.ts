@@ -8,7 +8,7 @@ const embeddings = new OllamaEmbeddings({
     baseUrl: "http://localhost:11434", // default value
 });
 
-ollama.get('/', async (ctx) => {
+ollama.get('/embedding', async (ctx) => {
     const documents = ["Hello World!", "Bye Bye"];
     const documentEmbeddings = await embeddings.embedDocuments(documents);
     return ctx.text(documentEmbeddings.toString());

@@ -1,8 +1,9 @@
 {
   "name": "llm-app-demo",
+  "main": "src/index.ts",
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "build": "tsx build src/index.ts"
+    "build": "node build.js"
   },
   "dependencies": {
     "@hono/node-server": "^1.11.4",
@@ -12,10 +13,12 @@
     "better-sqlite3": "^9.6.0",
     "hono": "^4.4.9",
     "langchain": "^0.2.8",
-    "langsmith": "^0.1.34"
+    "langsmith": "^0.1.34",
+    "typescript": "^5.5.3"
   },
   "devDependencies": {
     "@types/node": "^20.11.17",
+    "esbuild": "^0.23.0",
     "tsx": "^4.7.1"
   }
 }

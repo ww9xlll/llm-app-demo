@@ -1,6 +1,6 @@
 import chat from './chat';
-import ollamaEmbeddings from './ollama-embeddings';
+import ollama from './ollama';
 
-const routes = { chat, ollamaEmbeddings };
+const routes = { chat, ollama };
 
 export default routes;

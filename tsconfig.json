@@ -8,7 +8,13 @@
     "types": [
       "node"
     ],
-    "jsx": "react-jsx",
-    "jsxImportSource": "hono/jsx"
-  }
+    "outDir": "build",
+  },
+  "include": [
+      "src/**/*.ts",
+      "src/**/*.d.ts",
+      "src/**/*.mts",
+      "src/**/*.test.ts",
+      "src/**/*.test.tsx"
+    ],
 }
