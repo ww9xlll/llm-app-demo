@@ -41,6 +41,6 @@ jobs:
           ssh -o StrictHostKeyChecking=no $REMOTE_USER@$REMOTE_HOST << 'ENDSSH'
             cd $REMOTE_DIR
             mv llm.js.tmp llm.js
-            pm2 restart llm.js --name llm --env production
+            pm2 start ecosystem.config.js --env production
           ENDSSH
       shell: bash
