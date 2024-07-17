@@ -23,6 +23,7 @@ chat.get('/hunyuan', async (ctx) => {
     });
     const messages = [new HumanMessage(message)];
     let res = await hunyuanPro.invoke(messages);
+    console.log(`message: ${message}, resp: ${res.content}`)
     return ctx.text(res.content as string);
 });
 
