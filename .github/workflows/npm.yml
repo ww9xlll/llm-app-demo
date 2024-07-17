@@ -37,10 +37,10 @@ jobs:
           mkdir -p ~/.ssh
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          scp -o StrictHostKeyChecking=no ./dist/index.js $REMOTE_USER@$REMOTE_HOST:$REMOTE_DIR/index.js.tmp
+          scp -o StrictHostKeyChecking=no ./dist/index.js $REMOTE_USER@$REMOTE_HOST:$REMOTE_DIR/llm.js.tmp
           ssh -o StrictHostKeyChecking=no $REMOTE_USER@$REMOTE_HOST << 'ENDSSH'
             cd $REMOTE_DIR
-            mv index.js.tmp index.js
-            pm2 restart index.js
+            mv llm.js.tmp llm.js
+            pm2 restart llm.js --name llm --env production
           ENDSSH
       shell: bash
