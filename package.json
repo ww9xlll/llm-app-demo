@@ -3,7 +3,7 @@
   "main": "src/index.ts",
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "build": "node build.js"
+    "build": "node esbuild.config.js"
   },
   "dependencies": {
     "@hono/node-server": "^1.11.4",

@@ -8,13 +8,6 @@
     "types": [
       "node"
     ],
-    "outDir": "build",
   },
-  "include": [
-      "src/**/*.ts",
-      "src/**/*.d.ts",
-      "src/**/*.mts",
-      "src/**/*.test.ts",
-      "src/**/*.test.tsx"
-    ],
+  "include": ["**/*.ts"]
 }
